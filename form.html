@@ -1,0 +1,116 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 800px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            display: grid;
+            gap: 2px;
+            grid-template-columns: 650px 150px;
+            grid-template-rows: 150px 50px 650px 50px ;
+            grid-template-areas: 
+            "header logo"
+            "nav nav"
+            "form form"
+            "footer footer"
+            ;
+        }
+        header{
+            grid-area: header;
+            color: rgb(255, 255, 255);
+            background-color: rgb(138,43,226);
+            text-align: center;
+            font-weight: bold;
+            font-size: 40px;
+            padding-top: 50px;
+            border-top-left-radius: 75px;
+        }
+        #img{
+            grid-area: logo;
+            background-color: rgb(138,43,226);
+        }
+        nav{
+            grid-area: nav;
+            text-align: center;
+            background-color: rgb(165,42,42);
+            padding-top: 15px;
+        }
+        nav a{
+            opacity: 0.6;
+            transition: 0.3s;
+            padding: 10px;
+        }
+        nav a:hover{
+            opacity: 1;
+            background-color: rgb(138,43,226);
+        }
+        form{
+            grid-area: form;
+            background-color: rgb(169,169,169);
+            color: rgb(0,0,0);
+            text-align: center;
+
+        }
+        input:required{
+            width: 200px;
+        }
+        footer{
+            grid-area: footer;
+            background-color: rgb(169,169,169);
+            text-align: center;
+            border-bottom-left-radius: 20px;
+        }
+    </style>
+    <script>
+        function doSubmit(){
+        var age = document.getElementById("age").value
+
+        if (age < 15 || age > 21){
+            window.alert("You must be between the ages of 15 and 21")
+            return false
+            window.close()
+        }  
+        window.alert("Thank you, your data has been sent")
+        return true
+    }
+
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <p>CSUF Adventure Club</p>
+        </header>
+        <aside id="img">
+            <img src="logo.png" height="150px" width = "150px">
+        </aside>
+        <nav>
+            <a href="index.html">Home</a>|
+            <a href="service.html">Service</a>|
+            <a href="gallery.html">Gallery</a>|
+            <a href="form.html">Registration</a>
+        </nav>
+        <form>
+            <p>Member Data</p>
+            Full name: <input type="text" required>
+            <br>
+            Email Address: <input type="email" required>
+            <br>
+            No Hp: <input type="number" required>
+            <br>
+            Age: <input type="number" id="age" required>
+            <br>
+            School From: <input type="text" required>
+            <br>
+            <input type="submit" id="button" onclick="doSubmit()">
+            <input type="reset" id="button">
+        </form>
+        <footer>
+            <p>admin@csuf.org</p>
+        </footer>
+    </div>
+</body>
+</html>
