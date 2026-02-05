@@ -1,0 +1,131 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            width: 800px;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            display: grid;
+            gap: 2px;
+            grid-template-columns: 650px 150px;
+            grid-template-rows: 150px 50px 650px 50px ;
+            grid-template-areas: 
+            "header logo"
+            "nav nav"
+            "article prom"
+            "footer footer"
+            ;
+        }
+        header{
+            grid-area: header;
+            color: rgb(255, 255, 255);
+            background-color: rgb(138,43,226);
+            text-align: center;
+            font-weight: bold;
+            font-size: 40px;
+            padding-top: 50px;
+            border-top-left-radius: 75px;
+        }
+        article video{
+            margin-left: 20px
+        }
+        #img{
+            grid-area: logo;
+            background-color: rgb(138,43,226);
+        }
+        nav{
+            grid-area: nav;
+            text-align: center;
+            background-color: rgb(165,42,42);
+            padding-top: 15px;
+        }
+        nav a{
+            opacity: 0.6;
+            transition: 0.3s;
+            padding: 10px;
+        }
+        nav a:hover{
+            opacity: 1;
+            background-color: rgb(138,43,226);
+        }
+        article{
+            grid-area: article;
+            float: right;
+            text-align: justify;
+            text-overflow: clip;
+            background-color: rgb(169,169,169);
+        }
+        #video{
+            float: right;
+        }
+        #caption{
+            text-align: center;
+        }
+        #prom #news{
+            font-style: italic;
+        }
+        #prom li{
+            text-align: justify;
+        }
+        #prom-img{
+            border-radius: 50px;
+            margin: 10px auto;
+        }
+        #prom{
+            grid-area: prom;
+            background-color: rgb(169,169,169);
+            justify-content: center;
+            display: flex;
+            flex-direction: column;
+        }
+        footer{
+            grid-area: footer;
+            background-color: rgb(169,169,169);
+            text-align: center;
+            border-bottom-left-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <p>CSUF Adventure Club</p>
+        </header>
+        <aside id="img">
+            <img src="logo.png" height="150px" width = "150px">
+        </aside>
+        <nav>
+            <a href="index.html">Home</a>|
+            <a href="service.html">Service</a>|
+            <a href="gallery.html">Gallery</a>|
+            <a href="form.html">Registration</a>
+        </nav>
+        <article>
+            <h3>About Adventure Club</h3>
+            <video src="adventure-club.mp4" id = "video" format = "mp4", width = 320px, autoplay = true, loop = true, controls = true></video>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. A, necessitatibus harum qui non autem expedita repellat iusto veritatis architecto dolore officiis dolores voluptatibus molestias illum nobis porro, laborum itaque quam.</p>
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Dolorum magnam nostrum at ipsam, laboriosam dignissimos architecto voluptatem quidem, iste eligendi, et itaque fuga a. Vel voluptas dolorum rerum fugiat nulla.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Hic ut aliquam tempora, vero ex corporis saepe asperiores earum sit, doloremque dolorem excepturi voluptate, sed unde culpa? Incidunt, aut! Id, adipisci.</p>
+        </article>
+        <aside id="prom">
+            <p id="news">News:</p>
+            <ul>
+                <li>Hiking</li>
+                <li>Climbing</li>
+                <li>Competition</li>
+            </ul>
+            <img src="iklan1.jpg" width="120px" id="prom-img">
+            <br>
+            <p id="caption">Sale Tents</p>
+            <img src="iklan2.jpg" width="120px" id="prom-img">
+            <br>
+            <p id="caption">Sale Hiking Tools</p>
+        </aside>
+        <footer>
+            <p>admin@csuf.org</p>
+        </footer>
+    </div>
+</body>
+</html>
