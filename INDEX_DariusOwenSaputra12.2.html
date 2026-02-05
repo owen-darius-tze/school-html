@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agneyastra-2023</title>
+    <style>
+        .heading{
+            background-color: #DAA520;
+            color: crimson;
+            border-top-left-radius: 10px;
+        }
+        .container{
+            width: 800px;
+            display: grid;
+            margin: auto;
+            grid-template-columns: 240px 510px 50px;
+            grid-template-rows: 50px 30px 400px 50px 30px; /*height of each content in html*/
+            font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+            align-content: justify;
+            grid-template-areas:
+            "heading heading logo"
+            "top-nav top-nav top-nav"
+            "teaser article article"
+            "sponsor bottom-nav bottom-nav"
+            "sponsor footer footer"
+            ;
+            gap: 20px;
+            padding: 30px;
+        }
+        #logo{
+            background-color: #DAA520;
+            border: none;
+            grid-area: logo;
+            width: 50px;
+        }
+        .heading{
+            grid-area: heading;
+            border-top-left-radius: 10px;
+            text-align: center;
+            text-transform: bold;
+        }
+        #top-nav{
+            grid-area:top-nav;
+            background-color: #FFD700;
+            border: none;
+            height: 30px;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+        #teaser{
+            grid-area: teaser;
+            border: none;
+            width: 240px;
+            background-color: #DCDCDC;
+        }
+        article{
+            grid-area: article;
+            width: 560px;
+            text-align: justify;
+            border: none;
+            background: none;
+            float: left;
+            overflow: auto;
+        }
+        article img{
+            float: left;
+            margin: 10px;
+        }
+        #sponsors{
+            grid-area: sponsor;
+            border: none;
+            background-color: #DCDCDC;
+        }
+        #bottom-nav{
+            grid-area: bottom-nav;
+            text-align: center;
+            background-color: #FFD700;
+            color: white;
+            border: none;
+        }
+        footer{
+            border-bottom-right-radius: 10px;
+            grid-area: footer;
+            color: #fdfcfc;
+            background-color: #000080;
+            text-align: center;
+            justify-content: center;
+            align-items: center;
+            display: flex;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="heading">
+            <header>
+                <h3>AGNEYASTRA 2023</h3>
+            </header>
+        </div>
+        <img src="logo.png" id = "logo">
+        <nav id="top-nav">
+            <p class="navigation">
+                <a href="index.html">Home</a> |
+                <a href="Competition.html">Competition</a> |
+                <a href="result.html"> Result</a> |
+                <a href="committee.html"> Committee</a> |
+                <a href="registration.html"> Registration</a> |
+                <a href="form.html">Contact</a></p>
+        </nav>
+        <aside id="teaser">
+            <video src="teaser.mp4" height="400px" width="240px" type="video/mp4" autoplay = true, loop = true, controls = true></video>
+        </aside>
+        <article>
+            <h3>Opening Ceremony</h3>
+            <img src="news1.JPG" height="150px" width="150px">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <br>
+            <img src="news2.JPG" height="150px" width="150px">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quia qui recusandae, molestias vitae deserunt placeat fuga unde quaerat itaque quam aut consequuntur, reiciendis beatae minima rerum error perspiciatis? Ullam, assumenda?</p>
+        </article>
+        <aside id="sponsors">
+            <img src="sponsor.png" height="100px" width = "240px">
+        </aside>
+            <nav id="bottom-nav">
+                <p>
+                    <a href="https://www.youtube.com/@santalaurensiaschool9715">YouTube</a> | 
+                    <a href="https://www.instagram.com/laurensiacup2023">Instagram</a> |
+                    <a href="https://www.facebook.com/santalaurensiaalamsutera/?locale=id_ID">Facebook</a>
+                </p>
+            </nav>
+        <footer>
+            <p>Santa Laurensia School – Alam Sutera @ 2023</p>
+        </footer>
+    </div>
+</body>
+</html>

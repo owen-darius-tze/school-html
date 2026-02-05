@@ -1,0 +1,101 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            grid-template-columns: auto;
+            grid-template-rows: 50px 30px 400px;
+            grid-template-areas: 
+            "header"
+            "nav"
+            "form";
+        }
+        header{
+            background-color: #DAA520;
+            color: crimson;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+            text-align: center;
+            text-transform: bold;
+            grid-area: header;
+        }
+        nav{
+            background-color: #FFD700;
+            grid-area: nav;
+        }
+        form{
+            background-color: #FFD700;
+            color: crimson;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            text-align: center;
+            grid-area: form;
+        }
+        form input{
+            width: 200px;
+        }
+    </style>
+    <script>
+        function doSubmit(){
+            var charge = document.getElementById("PIC").value;
+            var phone = document.getElementById("phonenum").value; 
+            var school = document.getElementById("school").value; 
+            var address = document.getElementById("address").value; 
+            var email = document.getElementById("email").value;
+            var comp = document.getElementById("competition").value;
+        
+        if (charge == "" || phone == "" || school == "" || address == "" ||email ==""||comp == ""){
+            window.alert("Please complete the form");
+        }
+        else{
+            window.alert("Congrats! You completed the form.");
+        }
+    }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Registration Form</h1>
+    </header>
+    <nav>
+        <a href="index.html">Home</a> |
+        <a href="Competition.html">Competition</a> |
+        <a href="result.html"> Result</a> |
+        <a href="committee.html"> Committee</a> |
+        <a href="registration.html"> Registration</a> |
+        <a href="form.html">Contact</a>
+    </nav>
+    <form id="form">
+        <label>Person In Charge</label>
+        <br>
+        <input type="text" id="PIC" required></li>
+        <br>
+        <label>Contact Number</label>
+        <br>
+        <input type="text" id="phonenum" required></li>
+        <br>
+        <label>School</label>
+        <br>
+        <input type="text" id="school" required></li>
+        <br>
+        <label>Address</label>
+        <br>
+        <input type="text" id="address" required></li>
+        <br>
+        <label>Email Address</label>
+        <br>
+        <input type="email" id="email" required></li>
+        <br>
+        <label>Competition</label>
+        <br>
+        <input type="text" id="competition" required></li>
+        <br>
+        <div class="submission"></div>
+            <input type = "submit" onclick="doSubmit()">
+            <input type="reset">
+        </div>
+    </form>
+</body>
+</html>
